@@ -1,0 +1,140 @@
+@use '../1-helpers/variables' as vars;
+@use '../1-helpers/mixins' as mix;
+
+header {
+    background: url(../../images/mobile/image-header.jpg) center/cover; 
+    display: flex;
+    flex-direction: column;
+    height: 74vh;
+    
+    
+    nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 1.3rem;
+        position: relative;
+        width: 100%;
+
+        img {
+            height: auto;
+            object-fit: contain;
+            width: 9.3rem;
+        }
+
+        button {
+            @include mix.resetButton;
+            transition: transform .7s;
+        }
+
+        .h__desktop-menu {
+            color: vars.$White;
+            display: none;
+            flex: .83;
+            margin: 0 1rem;
+            max-width: 37rem;
+
+            ul {
+                align-items: center;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                button { 
+                    background-color: vars.$White;
+                    border-radius: 999px;
+                    color: #333333;
+                    font-family: vars.$ftn-Fraunces;
+                    padding: 1rem 1.5rem;
+                }
+            }
+        }
+
+        .h__mobile-menu {
+            background-color: vars.$White;
+            display: block;
+            height: 40vh;
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 6.7rem;
+            transition: opacity .7s;
+            width: 90%;
+
+            ul {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+                padding: 2rem;
+
+                li, button {
+                    color: vars.$Dark-grayish-blue;
+                    font-size: 1.05rem;
+                }
+
+                button {
+                    background-color: vars.$Yellow;
+                    border-radius: 999px;
+                    color: vars.$Very-dark-desaturated-blue;
+                    font-family: vars.$ftn-Fraunces;
+                    padding: 1rem 2rem;
+                }
+            }
+
+            .triangle {
+                background-color: transparent;
+                border-bottom: 4rem solid transparent;
+                border-left: 4rem solid transparent;
+                border-right: 4rem solid vars.$White;
+                border-top: 4rem solid transparent;
+                height: 0rem;
+                position: absolute;
+                right: 0;
+                top: -1.5rem;
+                width: 0rem;
+            }
+        }
+
+        .show-menu {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .h__mobile-menu.show-menu + .nav__button-menu {
+            transform: rotate(90deg);
+        }
+
+        @media only screen and (min-width: vars.$mid-query) {
+            .h__mobile-menu, .nav__button-menu { display: none; }
+            .h__desktop-menu { display: flex; } 
+            
+        }
+    }
+
+    .header__info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 1rem auto;
+        height: 40vh;
+        
+        h1 {
+            color: vars.$White;
+            font-family: vars.$ftn-Fraunces;
+            font-size: 2.3rem;
+            margin: auto;
+            letter-spacing: .35rem;
+            text-align: center;
+        }
+    }
+
+    @media only screen and (min-width: vars.$mid-query){
+        background: url(../../images/desktop/image-header.jpg) center/cover; 
+
+        & .header__info h1 {
+            font-size: 2.8rem;
+        }
+    }
+}

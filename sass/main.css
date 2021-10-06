@@ -30,4 +30,144 @@ li, ul li {
   list-style: none;
 }
 
+header {
+  background: url(../../images/mobile/image-header.jpg) center/cover;
+  display: flex;
+  flex-direction: column;
+  height: 74vh;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.3rem;
+  position: relative;
+  width: 100%;
+}
+header nav img {
+  height: auto;
+  object-fit: contain;
+  width: 9.3rem;
+}
+header nav button {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  transition: transform 0.7s;
+}
+header nav .h__desktop-menu {
+  color: white;
+  display: none;
+  flex: 0.83;
+  margin: 0 1rem;
+  max-width: 37rem;
+}
+header nav .h__desktop-menu ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+header nav .h__desktop-menu ul button {
+  background-color: white;
+  border-radius: 999px;
+  color: #333333;
+  font-family: "Fraunces";
+  padding: 1rem 1.5rem;
+}
+header nav .h__mobile-menu {
+  background-color: white;
+  display: block;
+  height: 40vh;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 6.7rem;
+  transition: opacity 0.7s;
+  width: 90%;
+}
+header nav .h__mobile-menu ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem;
+}
+header nav .h__mobile-menu ul li, header nav .h__mobile-menu ul button {
+  color: #818498;
+  font-size: 1.05rem;
+}
+header nav .h__mobile-menu ul button {
+  background-color: #FFD600;
+  border-radius: 999px;
+  color: #23303e;
+  font-family: "Fraunces";
+  padding: 1rem 2rem;
+}
+header nav .h__mobile-menu .triangle {
+  background-color: transparent;
+  border-bottom: 4rem solid transparent;
+  border-left: 4rem solid transparent;
+  border-right: 4rem solid white;
+  border-top: 4rem solid transparent;
+  height: 0rem;
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  width: 0rem;
+}
+header nav .show-menu {
+  opacity: 1;
+  pointer-events: all;
+}
+header nav .h__mobile-menu.show-menu + .nav__button-menu {
+  transform: rotate(90deg);
+}
+@media only screen and (min-width: 47.5rem) {
+  header nav .h__mobile-menu, header nav .nav__button-menu {
+    display: none;
+  }
+  header nav .h__desktop-menu {
+    display: flex;
+  }
+}
+header .header__info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem auto;
+  height: 40vh;
+}
+header .header__info h1 {
+  color: white;
+  font-family: "Fraunces";
+  font-size: 2.3rem;
+  margin: auto;
+  letter-spacing: 0.35rem;
+  text-align: center;
+}
+@media only screen and (min-width: 47.5rem) {
+  header {
+    background: url(../../images/desktop/image-header.jpg) center/cover;
+  }
+  header .header__info h1 {
+    font-size: 2.8rem;
+  }
+}
+
+main img {
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
 /*# sourceMappingURL=main.css.map */

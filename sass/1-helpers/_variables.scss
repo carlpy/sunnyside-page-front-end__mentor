@@ -5,8 +5,9 @@
  || Queries ||
  ============*/
 
-$mobile-query: 375px;
-$desktop-query: 1440px;
+$mobile-query: 23.43rem;
+$mid-query: 47.5rem;
+$desktop-query: 90rem;
 
 /*===========
  || Colors ||  
@@ -27,6 +28,7 @@ $Very-dark-grayish-blue: hsl(213, 9%, 39%);
 $Dark-grayish-blue: hsl(232, 10%, 55%);
 $Grayish-blue: hsl(210, 4%, 67%);
 $White: hsl(0, 0%, 100%);
+$Yellow: #FFD600;
 
 /*===============
  || Typography ||
