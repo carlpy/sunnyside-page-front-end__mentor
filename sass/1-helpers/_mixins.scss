@@ -1,6 +1,33 @@
+@use './variables' as vars;
+
 @mixin resetButton {
     border: none;
     background-color: transparent;
     color: inherit;
     outline: none;
+}
+
+@mixin fontStyles($font, $color) {
+    h2 {
+        font-family: $font;
+        font-size: 1.5rem; 
+        font-weight: 700;
+        text-align: center;
+    }
+
+    p {
+        color: $color;
+        line-height: 1.9;
+        margin: .8rem 0;
+        font-size: .9rem;
+        padding: 0 .5rem;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: vars.$upper-mid-query) {
+        h2 { font-size: 1.8rem;}
+        p { font-size: 1rem;}
+    }
+
+    
 }

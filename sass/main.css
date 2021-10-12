@@ -99,7 +99,7 @@ header nav .h__mobile-menu ul li, header nav .h__mobile-menu ul button {
   font-size: 1.05rem;
 }
 header nav .h__mobile-menu ul button {
-  background-color: #FFD600;
+  background-color: #ffd500;
   border-radius: 999px;
   color: #23303e;
   font-family: "Fraunces";
@@ -157,8 +157,199 @@ header .header__info h1 {
   }
 }
 
-main img {
+main .main__branding img {
+  display: block;
+  /*  */
+  height: 100%;
+  object-fit: cover;
   width: 100%;
+}
+main .main__branding h2 {
+  width: 100%;
+}
+main .main__branding p {
+  line-height: 2rem;
+}
+main .main__branding .section__transform-article .section__info, main .main__branding .section__stand-article .section__info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  /*  */
+}
+main .main__branding .section__transform-article .section__info h2, main .main__branding .section__stand-article .section__info h2 {
+  font-family: "Fraunces";
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+main .main__branding .section__transform-article .section__info p, main .main__branding .section__stand-article .section__info p {
+  color: #818498;
+  line-height: 1.9;
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 60rem) {
+  main .main__branding .section__transform-article .section__info h2, main .main__branding .section__stand-article .section__info h2 {
+    font-size: 1.8rem;
+  }
+  main .main__branding .section__transform-article .section__info p, main .main__branding .section__stand-article .section__info p {
+    font-size: 1rem;
+  }
+}
+main .main__branding .section__transform-article .section__info button, main .main__branding .section__stand-article .section__info button {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+}
+main .main__branding .section__transform-article .section__info button a, main .main__branding .section__stand-article .section__info button a {
+  font-family: "Fraunces";
+}
+main .main__branding .section__transform-article .section__info button::after, main .main__branding .section__stand-article .section__info button::after {
+  background-color: #ffd500;
+  border-radius: 999px;
+  bottom: 0;
+  content: "";
+  height: 0.2rem;
+  left: 0;
+  opacity: 0.3;
+  position: absolute;
+  width: 105%;
+}
+main .main__branding .section__stand-article .section__info button:after {
+  background-color: #fe7867;
+}
+main .main__branding .img-container {
+  position: relative;
+}
+main .main__branding .img-container .section__info {
+  bottom: 1.5rem;
+  position: absolute;
+}
+main .main__branding .section__graphic-article h2, main .main__branding .section__photography-article h2 {
+  font-family: "Fraunces";
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+main .main__branding .section__graphic-article p, main .main__branding .section__photography-article p {
+  color: #333333;
+  line-height: 1.9;
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+  padding: 0 0.5rem;
+  text-align: center;
+}
+@media only screen and (min-width: 60rem) {
+  main .main__branding .section__graphic-article h2, main .main__branding .section__photography-article h2 {
+    font-size: 1.8rem;
+  }
+  main .main__branding .section__graphic-article p, main .main__branding .section__photography-article p {
+    font-size: 1rem;
+  }
+}
+@media only screen and (min-width: 47.5rem) {
+  main .main__branding img {
+    display: inherit;
+  }
+  main .main__branding .section__transform-article .section__info, main .main__branding .section__stand-article .section__info {
+    padding: 1rem 0;
+  }
+  main .main__branding .section-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .main__branding .section-grid div, main .main__branding .section-grid article {
+    flex-basis: 50%;
+  }
+  main .main__branding .art-2.section-grid .section__info {
+    justify-content: center;
+  }
+  main .main__branding .art-2.section-grid .section__info p, main .main__branding .art-2.section-grid .section__info h2 {
+    max-width: 670px;
+    padding: 0 auto;
+    text-align: left;
+    width: 80%;
+  }
+  main .main__branding .section__transform-article div:first-child {
+    order: 2;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  main .main__branding .section-grid .section__info h2 {
+    font-size: 1.95rem;
+  }
+  main .main__branding .section-grid .section__info p {
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+  }
+}
+main .main__testimonials h3 {
+  color: #a7abae;
+  font-family: "Fraunces";
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.35rem;
+  margin: 3rem 0;
+  text-align: center;
+}
+main .main__testimonials .testimonials {
+  margin: 0 0 1.5rem 0;
+}
+main .main__testimonials .testimonials .img-container {
+  margin: 0 auto;
+  object-fit: cover;
+  width: 6rem;
+}
+main .main__testimonials .testimonials .img-container img {
+  border-radius: 50%;
+  width: 100%;
+}
+main .main__testimonials .testimonials p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 1.5rem 0;
+  padding: 0 4rem;
+  text-align: center;
+}
+main .main__testimonials .testimonials strong, main .main__testimonials .testimonials span {
+  display: block;
+  text-align: center;
+}
+main .main__testimonials .testimonials strong {
+  font-family: "Fraunces";
+  font-weight: 800;
+  font-size: 1.05rem;
+  margin: 0 0 0.7rem 0;
+}
+main .main__testimonials .testimonials span {
+  color: #a7abae;
+  font-size: 0.8rem;
+}
+@media only screen and (min-width: 47.5rem) {
+  main .main__testimonials .main__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 0 0 0;
+  }
+  main .main__testimonials .main__container p {
+    padding: 0 2rem;
+  }
+}
+@media only screen and (min-width: 90rem) {
+  main .main__testimonials .testimonials p {
+    font-size: 1.25rem;
+  }
+  main .main__testimonials .testimonials strong {
+    font-size: 1.1rem;
+  }
+  main .main__testimonials .testimonials span {
+    font-size: 0.9rem;
+  }
 }
 
 .attribution {

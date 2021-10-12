@@ -1,3 +1,168 @@
+@use '../1-helpers/variables' as vars;
+@use '../1-helpers/mixins' as mix;
+
 main {
-    img { width: 100%; }
+    .main__branding {
+
+        img { 
+            display: block;/*  */
+            height: 100%;
+            object-fit: cover;
+            width: 100%; 
+        }
+    
+        h2 { width: 100%;}
+        p { line-height: 2rem;}
+    
+        .section__transform-article .section__info, .section__stand-article .section__info {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1rem; /*  */
+            @include mix.fontStyles(vars.$ftn-Fraunces, vars.$Dark-grayish-blue);
+    
+            button {
+                position: relative;
+                @include mix.resetButton;
+    
+                a {font-family: vars.$ftn-Fraunces;}
+            }
+    
+            button::after {
+                background-color: vars.$Yellow;
+                border-radius: 999px;
+                bottom: 0;
+                content: '';
+                height: .2rem;
+                left: 0;
+                opacity: .3;
+                position: absolute;
+                width: 105%;
+            }
+        }
+    
+        .section__stand-article .section__info {
+            button:after { background-color: vars.$Soft-red; }
+        }
+    
+        .img-container {
+            position: relative;
+    
+            .section__info {
+                bottom: 1.5rem;
+                position: absolute;
+            }
+        }
+    
+        .section__graphic-article, .section__photography-article {
+            @include mix.fontStyles(vars.$ftn-Fraunces, #333333);
+        }
+    
+        @media only screen and (min-width: vars.$mid-query) {
+            img { display: inherit;}
+
+            .section__transform-article .section__info, .section__stand-article .section__info {
+                padding: 1rem 0;
+            }
+
+            .section-grid {
+                display: flex;
+                flex-wrap: wrap;
+        
+                div, article {
+                    flex-basis: 50%;
+                }
+            }
+    
+            .art-2.section-grid .section__info {     
+                justify-content: center; 
+
+                p, h2 { 
+                    max-width: 670px; 
+                    padding: 0 auto;
+                    text-align: left; 
+                    width: 80%; 
+                }
+            }
+    
+            .section__transform-article {
+                div:first-child { order: 2; }
+            }        
+        }
+    
+        @media only screen and (min-width: vars.$desktop-query) {
+            .section-grid .section__info {
+                h2 { font-size: 1.95rem;}
+                p { font-size: 1.25rem; margin: 1.5rem 0;}
+            }
+        }
+    }
+
+    .main__testimonials {
+
+        h3 { 
+            color: vars.$Grayish-blue;
+            font-family: vars.$ftn-Fraunces;
+            font-size: .8rem;
+            font-weight: 700;
+            letter-spacing: .35rem;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .testimonials {
+            margin: 0 0 1.5rem 0;
+
+            .img-container {
+                margin: 0 auto;
+                object-fit: cover;
+                width: 6rem;
+
+                img { 
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+
+            p { 
+                font-size: 1rem;
+                line-height: 1.8;
+                margin: 1.5rem 0;
+                padding: 0 4rem;
+                text-align: center;
+            }
+
+            strong, span { display: block; text-align: center;}
+
+            strong {
+                font-family: vars.$ftn-Fraunces;
+                font-weight: 800;
+                font-size: 1.05rem;
+                margin: 0 0 .7rem 0;
+            }
+
+            span {
+                color: vars.$Grayish-blue;
+                font-size: .8rem;
+            }
+        }
+
+        @media only screen and (min-width: vars.$mid-query) {
+            .main__container { 
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                margin: 2rem 0 0 0;
+
+                p { padding: 0 2rem;}
+            }
+        }
+
+        @media only screen and (min-width: vars.$desktop-query) {
+            .testimonials { 
+                p { font-size: 1.25rem;} 
+                strong { font-size: 1.1rem;}
+                span { font-size: .9rem;}
+            }
+        }
+    }
 }
