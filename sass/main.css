@@ -174,7 +174,7 @@ main .main__branding .section__transform-article .section__info, main .main__bra
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   /*  */
 }
 main .main__branding .section__transform-article .section__info h2, main .main__branding .section__stand-article .section__info h2 {
@@ -186,7 +186,7 @@ main .main__branding .section__transform-article .section__info h2, main .main__
 main .main__branding .section__transform-article .section__info p, main .main__branding .section__stand-article .section__info p {
   color: #818498;
   line-height: 1.9;
-  margin: 0.8rem 0;
+  margin: 1.3rem 0;
   font-size: 0.9rem;
   padding: 0 0.5rem;
   text-align: center;
@@ -239,7 +239,7 @@ main .main__branding .section__graphic-article h2, main .main__branding .section
 main .main__branding .section__graphic-article p, main .main__branding .section__photography-article p {
   color: #333333;
   line-height: 1.9;
-  margin: 0.8rem 0;
+  margin: 1.3rem 0;
   font-size: 0.9rem;
   padding: 0 0.5rem;
   text-align: center;
@@ -352,12 +352,62 @@ main .main__testimonials .testimonials span {
   }
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
+footer {
+  background-color: #92d3c5;
+  position: relative;
 }
-
-.attribution a {
+footer .footer__collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+footer .footer__collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 45vh;
+}
+footer section .img-cont img {
+  width: 10rem;
+}
+footer section .divs {
+  width: 70%;
+  max-width: 350px;
+}
+footer section .divs ul {
+  color: #2B7264;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 25rem;
+}
+footer section .divs:last-child {
+  width: 50%;
+  max-width: 200px;
+}
+@media only screen and (min-width: 47.5rem) {
+  footer .footer__collage {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer section li {
+    font-size: 1.2rem;
+  }
+}
+footer .attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+}
+footer .attribution a {
   color: #3e52a3;
 }
 

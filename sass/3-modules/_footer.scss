@@ -1,4 +1,65 @@
+@use '../1-helpers/variables' as vars;
+@use '../1-helpers/mixins' as mix;
 
+footer {
+    background-color: vars.$Light-cyan;
+    position: relative;
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+    .footer__collage {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height:45vh;
+
+        .img-cont img {
+            width: 10rem;
+        }
+
+        .divs {
+            width: 70%;
+            max-width: 350px;
+            ul {
+                color: vars.$Dark-moderate-cyan;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 25rem;
+            }
+        }
+
+        .divs:last-child {
+            width: 50%;
+            max-width: 200px;
+        }
+    }
+
+    @media only screen and (min-width: vars.$mid-query) {
+       .footer__collage { grid-template-columns: repeat(4, 1fr); }
+       section { li { font-size: 1.2rem; } }
+    }
+
+    .attribution { 
+        font-size: .8rem; 
+        text-align: center; 
+        position: absolute;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+
+        a { color: hsl(228, 45%, 44%); }
+    }
+    
+}
