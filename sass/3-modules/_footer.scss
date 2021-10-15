@@ -10,16 +10,16 @@ footer {
         grid-template-columns: repeat(2, 1fr);
 
         img {
-            width: 100%;
             height: 100%;
             object-fit: cover;
+            width: 100%;
         }
     }
 
     section {
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-evenly;
         height:45vh;
 
@@ -28,20 +28,20 @@ footer {
         }
 
         .divs {
-            width: 70%;
             max-width: 350px;
+            width: 70%;
             ul {
                 color: vars.$Dark-moderate-cyan;
                 display: flex;
                 justify-content: space-between;
-                width: 100%;
                 max-width: 25rem;
+                width: 100%;
             }
         }
 
         .divs:last-child {
-            width: 50%;
             max-width: 200px;
+            width: 50%;
         }
     }
 
@@ -51,11 +51,11 @@ footer {
     }
 
     .attribution { 
-        font-size: .8rem; 
-        text-align: center; 
-        position: absolute;
         bottom: 1rem;
+        font-size: .8rem; 
         left: 50%;
+        position: absolute;
+        text-align: center; 
         transform: translateX(-50%);
         width: 100%;
 

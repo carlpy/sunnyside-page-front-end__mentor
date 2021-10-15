@@ -361,14 +361,14 @@ footer .footer__collage {
   grid-template-columns: repeat(2, 1fr);
 }
 footer .footer__collage img {
-  width: 100%;
   height: 100%;
   object-fit: cover;
+  width: 100%;
 }
 footer section {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
   height: 45vh;
 }
@@ -376,19 +376,19 @@ footer section .img-cont img {
   width: 10rem;
 }
 footer section .divs {
-  width: 70%;
   max-width: 350px;
+  width: 70%;
 }
 footer section .divs ul {
   color: #2B7264;
   display: flex;
   justify-content: space-between;
-  width: 100%;
   max-width: 25rem;
+  width: 100%;
 }
 footer section .divs:last-child {
-  width: 50%;
   max-width: 200px;
+  width: 50%;
 }
 @media only screen and (min-width: 47.5rem) {
   footer .footer__collage {
@@ -399,11 +399,11 @@ footer section .divs:last-child {
   }
 }
 footer .attribution {
-  font-size: 0.8rem;
-  text-align: center;
-  position: absolute;
   bottom: 1rem;
+  font-size: 0.8rem;
   left: 50%;
+  position: absolute;
+  text-align: center;
   transform: translateX(-50%);
   width: 100%;
 }
